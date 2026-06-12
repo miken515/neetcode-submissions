@@ -1,3 +1,4 @@
+// Hashmap btw
 class Solution:
     def hasDuplicate(self, nums: List[int]) -> bool:
         hashset = set()
