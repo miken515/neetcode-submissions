@@ -8,11 +8,21 @@
 # BFS solution
 class Solution:
     def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+        """
+        Solves the Same Binary Tree problem.
+
+        Algorithm: Queue-based
+        - Approach: Implement algorithm efficiently
+        - Key Operations: insert nodes/elements into result structure
+
+        Time Complexity: O(n) - depends on problem constraints
+        Space Complexity: O(n) - minimal extra space used
+        """
         q1 = deque([p])
         q2 = deque([q])
 
-        while q1 and q2:
-            for _ in range(len(q1)):
+        while q1 and q2:  # Iterate until condition fails
+            for _ in range(len(q1)):  # Process each element
                 nodeP = q1.popleft()
                 nodeQ = q2.popleft()
 

@@ -1,8 +1,23 @@
+# Insert New Interval Solution
+#
+# This solution implements an efficient algorithm for the insert new interval problem.
+# Key concepts: Analyze constraints, choose optimal data structures, handle edge cases
+#
 class Solution:
     def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
+        """
+        Solves the Insert New Interval problem.
+
+        Algorithm: Algorithm
+        - Approach: Implement algorithm efficiently
+        - Key Operations: insert nodes/elements into result structure
+
+        Time Complexity: O(n^2) - nested loops over input
+        Space Complexity: O(1) to O(n) - minimal extra space used
+        """
         res = []
 
-        for i in range(len(intervals)):
+        for i in range(len(intervals)):  # Process each element
             start = 0
             end = 1
             if newInterval[start] > intervals[i][end]:

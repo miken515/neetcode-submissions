@@ -1,9 +1,24 @@
+# Find Target In Rotated Sorted Array Solution
+#
+# This solution implements an efficient algorithm for the find target in rotated sorted array problem.
+# Key concepts: Analyze constraints, choose optimal data structures, handle edge cases
+#
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
+        """
+        Solves the Find Target In Rotated Sorted Array problem.
+
+        Algorithm: Sorting
+        - Approach: Implement algorithm efficiently
+        - Key Operations: iterate through input with conditions
+
+        Time Complexity: O(n log n) - standard sorting complexity
+        Space Complexity: O(1) or O(n) - depends on sorting algorithm
+        """
         low = 0
         high = len(nums) - 1
  
-        while low <= high:
+        while low <= high:  # Iterate until condition fails
             mid = (low + high) // 2
     
             # Target found

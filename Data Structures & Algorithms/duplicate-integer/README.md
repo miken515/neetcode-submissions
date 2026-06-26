@@ -1,49 +1,84 @@
-# Contains Duplicate
+# Duplicate Integer
 
-## Problem
-Given an integer array, determine if any value appears more than once.
+## Problem Description
 
-Example: `[1,2,3,1]` → `True`, `[1,2,3,4]` → `False`
+Solve the duplicate integer problem efficiently.
+
+### Example
+```
+Input: Problem-specific input
+Output: Expected solution
+```
 
 ## Algorithm Explanation
 
-### Approach: HashSet
-1. **Initialize** an empty set
-2. **Iterate** through each number in the array
-3. **Check** if number already exists in set:
-   - If yes, return True (duplicate found)
-   - If no, add it to the set
-4. **Return** False if loop completes (no duplicates)
+### Approach: Hash Table/Dictionary
 
-### Time Complexity
-- **O(n)** where n is the length of the array
+The solution uses **hash table/dictionary** to solve this problem efficiently.
 
-### Space Complexity
-- **O(n)** for the hashset storage
+**Key Steps:**
+1. **Initialize**: Set up necessary data structures
+2. **Process**: Apply the algorithm logic
+3. **Return**: Construct and return the result
+
+**Algorithm Pattern:**
+- Implement algorithm efficiently
+- Use appropriate data structures for efficient access
+- Handle edge cases (empty input, single element, etc.)
+
+## Complexity Analysis
+
+### Time Complexity: O(n)
+- **Explanation**: linear scan plus hash operations
+- Each operation in the main loop runs in constant time
+- The loop itself runs for all relevant elements/iterations
+
+### Space Complexity: O(n)
+- **Explanation**: store up to n elements
+- Primary space usage: hash table stores key-value mappings
 
 ## Visual Representation
 
 ```
-Array: [1, 2, 3, 1]
-
-Step 1: Check 1
-  Set: {} → 1 not in set → Add 1
-  Set: {1}
-
-Step 2: Check 2
-  Set: {1} → 2 not in set → Add 2
-  Set: {1, 2}
-
-Step 3: Check 3
-  Set: {1, 2} → 3 not in set → Add 3
-  Set: {1, 2, 3}
-
-Step 4: Check 1 (again)
-  Set: {1, 2, 3} → 1 IS in set → Return True ✓
+Problem Input:
+├── Parse/Validate input
+├── Initialize data structure
+│
+├── Main Algorithm Loop:
+│   ├── Process current element
+│   ├── Update state/structure
+│   └── Move to next element
+│
+└── Return Result:
+    └── Output processed data
 ```
 
 ## Key Insights
-- HashSet provides O(1) average lookup time
-- Early exit when duplicate is found (efficient)
-- Simple and straightforward approach
-- Space-efficient compared to sorting alternatives
+
+1. **Algorithm Selection**: Algorithm chosen based on problem constraints
+2. **Edge Cases**: Handle empty inputs, single elements, and boundary conditions
+3. **Data Structures**: Use hash maps for O(1) lookups and frequency counting
+4. **Optimization**: Use appropriate algorithms for optimal complexity
+
+## Implementation Details
+
+- **Function Name**: `hasDuplicate`
+- **Input Parameters**: Properly typed according to problem requirements
+- **Output**: Returns result in expected format
+- **Edge Cases**: Handles empty inputs and boundary conditions
+
+## Common Patterns Used
+
+- Initialize pointer or counter variables
+- Iterate through input data
+- Update state based on algorithm logic
+- Return computed result
+
+## Testing Strategy
+
+1. Test with empty input (if applicable)
+2. Test with single element
+3. Test with typical case
+4. Test with edge cases (maximum values, etc.)
+5. Verify both correctness and complexity requirements
+

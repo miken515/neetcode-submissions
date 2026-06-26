@@ -8,6 +8,16 @@ class Node:
 #DFS and Hashmap
 class Solution:
     def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
+        """
+        Solves the Clone Graph problem.
+
+        Algorithm: Hash Table/Dictionary
+        - Approach: Implement algorithm efficiently
+        - Key Operations: insert nodes/elements into result structure
+
+        Time Complexity: O(n) - linear scan plus hash operations
+        Space Complexity: O(n) - store up to n elements
+        """
         
         oldToNewMap = {}
 
@@ -18,7 +28,7 @@ class Solution:
             copy = Node(node.val)
             oldToNewMap[node] = copy
 
-            for nei in node.neighbors:
+            for nei in node.neighbors:  # Iterate through collection
                 copy.neighbors.append(dfs(nei))
             return copy
 

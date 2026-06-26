@@ -6,6 +6,16 @@
 
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        """
+        Solves the Reverse A Linked List problem.
+
+        Algorithm: Backtracking
+        - Approach: Explore all possibilities with pruning
+        - Key Operations: recursive exploration with memoization
+
+        Time Complexity: O(2^n) - exponential search space
+        Space Complexity: O(n) - recursion depth and result storage
+        """
         if not head:
             return None
         

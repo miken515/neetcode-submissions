@@ -1,3 +1,8 @@
+# Kth Largest Integer In A Stream Solution
+#
+# This solution implements an efficient algorithm for the kth largest integer in a stream problem.
+# Key concepts: Analyze constraints, choose optimal data structures, handle edge cases
+#
 class KthLargest:
 
     def __init__(self, k: int, nums: List[int]):
@@ -8,6 +13,7 @@ class KthLargest:
             heapq.heappop(self.minheap)
 
     def add(self, val: int) -> int:
+        """Method: add"""
         heapq.heappush(self.minheap, val)
 
         if len(self.minheap) > self.k:

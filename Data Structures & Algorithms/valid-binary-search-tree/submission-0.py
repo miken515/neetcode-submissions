@@ -7,6 +7,16 @@
 
 class Solution:
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
+        """
+        Solves the Valid Binary Search Tree problem.
+
+        Algorithm: Algorithm
+        - Approach: Implement algorithm efficiently
+        - Key Operations: recursive exploration with memoization
+
+        Time Complexity: O(n) - linear scan of input
+        Space Complexity: O(1) - minimal extra space used
+        """
         
         def isValid(node, left, right):
             if not node:

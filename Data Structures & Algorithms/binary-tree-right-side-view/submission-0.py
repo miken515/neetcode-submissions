@@ -7,14 +7,24 @@
 
 class Solution:
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
+        """
+        Solves the Binary Tree Right Side View problem.
+
+        Algorithm: Queue-based
+        - Approach: Implement algorithm efficiently
+        - Key Operations: insert nodes/elements into result structure
+
+        Time Complexity: O(n) - depends on problem constraints
+        Space Complexity: O(n) - minimal extra space used
+        """
         q = deque([root])
         res = []
 
-        while q:
+        while q:  # Iterate until condition fails
             rightside = None
             qlen = len(q)
 
-            for i in range(qlen):
+            for i in range(qlen):  # Process each element
                 node = q.popleft()  
                 if node:
                     rightside = node

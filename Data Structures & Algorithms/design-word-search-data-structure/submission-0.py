@@ -1,3 +1,8 @@
+# Design Word Search Data Structure Solution
+#
+# This solution implements an efficient algorithm for the design word search data structure problem.
+# Key concepts: Analyze constraints, choose optimal data structures, handle edge cases
+#
 class TrieNode:
     def __init__(self):
         self.children = {}
@@ -11,6 +16,7 @@ class WordDictionary:
         
 
     def addWord(self, word: str) -> None:
+        """Method: addWord"""
         cur = self.root
         for c in word:
             if c not in cur.children:
@@ -19,6 +25,7 @@ class WordDictionary:
         cur.word = True
 
     def search(self, word: str) -> bool:
+        """Method: search"""
         def dfs(j, root):
             cur = root
             

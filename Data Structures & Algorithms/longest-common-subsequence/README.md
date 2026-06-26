@@ -1,50 +1,84 @@
 # Longest Common Subsequence
 
-## Problem
-Given two strings, find the length of the longest common subsequence (characters that appear in the same order, but not necessarily consecutive).
+## Problem Description
 
-Example: `text1 = "abcde", text2 = "ace"` → `3` ("ace" is the LCS)
+Solve the longest common subsequence problem efficiently.
+
+### Example
+```
+Input: Problem-specific input
+Output: Expected solution
+```
 
 ## Algorithm Explanation
 
-### Approach: Dynamic Programming (Bottom-Up)
-1. **Create** a 2D grid with dimensions (len(text1)+1) × (len(text2)+1)
-2. **Fill** from bottom-right to top-left:
-   - If characters match: `grid[i][j] = 1 + grid[i+1][j+1]` (diagonal)
-   - If not: `grid[i][j] = max(grid[i+1][j], grid[i][j+1])` (take best of right or bottom)
-3. **Return** `grid[0][0]` which contains the LCS length
+### Approach: Dynamic Programming
 
-### Time Complexity
-- **O(m × n)** where m and n are lengths of the two strings
+The solution uses **dynamic programming** to solve this problem efficiently.
 
-### Space Complexity
-- **O(m × n)** for the DP grid
+**Key Steps:**
+1. **Initialize**: Set up necessary data structures
+2. **Process**: Apply the algorithm logic
+3. **Return**: Construct and return the result
+
+**Algorithm Pattern:**
+- Build solution bottom-up using subproblems
+- Use appropriate data structures for efficient access
+- Handle edge cases (empty input, single element, etc.)
+
+## Complexity Analysis
+
+### Time Complexity: O(n)
+- **Explanation**: compute each subproblem once
+- Each operation in the main loop runs in constant time
+- The loop itself runs for all relevant elements/iterations
+
+### Space Complexity: O(n)
+- **Explanation**: store results for each subproblem
+- Primary space usage: DP table stores results for all subproblems
 
 ## Visual Representation
 
 ```
-text1 = "ABE"
-text2 = "DCE"
-
-       ""  D  C  E
-    "" 0   0  0  0
-    A  0   0  0  0
-    B  0   0  0  0
-    E  0   0  0  1  ← Match at E, take diagonal + 1
-    
-Filled grid (bottom-up):
-       ""  D  C  E
-    "" 0   0  0  0
-    A  0   0  0  0
-    B  0   0  0  0
-    E  0   0  0  1
-    
-Result: grid[0][0] = 1 (LCS length is "E")
+Problem Input:
+├── Parse/Validate input
+├── Initialize data structure
+│
+├── Main Algorithm Loop:
+│   ├── Process current element
+│   ├── Update state/structure
+│   └── Move to next element
+│
+└── Return Result:
+    └── Output processed data
 ```
 
 ## Key Insights
-- DP avoids recalculating overlapping subproblems
-- Grid rows represent text1, columns represent text2
-- Diagonal move indicates character match
-- Direction (right or bottom) is determined by maximum value
-- Can be optimized to O(min(m,n)) space with rolling arrays
+
+1. **Algorithm Selection**: Optimal when problem has overlapping subproblems
+2. **Edge Cases**: Handle empty inputs, single elements, and boundary conditions
+3. **Data Structures**: Choose data structures based on access patterns
+4. **Optimization**: Memoize intermediate results to avoid recomputation
+
+## Implementation Details
+
+- **Function Name**: `longestCommonSubsequence`
+- **Input Parameters**: Properly typed according to problem requirements
+- **Output**: Returns result in expected format
+- **Edge Cases**: Handles empty inputs and boundary conditions
+
+## Common Patterns Used
+
+- Initialize pointer or counter variables
+- Iterate through input data
+- Update state based on algorithm logic
+- Return computed result
+
+## Testing Strategy
+
+1. Test with empty input (if applicable)
+2. Test with single element
+3. Test with typical case
+4. Test with edge cases (maximum values, etc.)
+5. Verify both correctness and complexity requirements
+

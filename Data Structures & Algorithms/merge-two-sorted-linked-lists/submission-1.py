@@ -6,10 +6,20 @@
 
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        """
+        Solves the Merge Two Sorted Linked Lists problem.
+
+        Algorithm: Linked List Manipulation
+        - Approach: Implement algorithm efficiently
+        - Key Operations: iterate through input with conditions
+
+        Time Complexity: O(n) - traverse the linked list
+        Space Complexity: O(1) or O(n) - depends on whether new list created
+        """
         dummy = ListNode()
         tail = dummy
 
-        while list1 and list2:
+        while list1 and list2:  # Iterate until condition fails
             if list1.val < list2.val:
                 tail.next = list1
                 list1 = list1.next

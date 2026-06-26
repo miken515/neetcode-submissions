@@ -1,3 +1,8 @@
+# Find Median In A Data Stream Solution
+#
+# This solution implements an efficient algorithm for the find median in a data stream problem.
+# Key concepts: Analyze constraints, choose optimal data structures, handle edge cases
+#
 class MedianFinder:
 
     def __init__(self):
@@ -6,6 +11,7 @@ class MedianFinder:
         
 
     def addNum(self, num: int) -> None:
+        """Method: addNum"""
         if self.large and num > self.large[0]:
             heapq.heappush(self.large, num)
         else:
@@ -23,6 +29,7 @@ class MedianFinder:
         
 
     def findMedian(self) -> float:
+        """Method: findMedian"""
         smallLength = len(self.small)
         largeLength = len(self.large)
 

@@ -7,6 +7,16 @@
 
 class Solution:
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+        """
+        Solves the Binary Tree Diameter problem.
+
+        Algorithm: Algorithm
+        - Approach: Implement algorithm efficiently
+        - Key Operations: recursive exploration with memoization
+
+        Time Complexity: O(n) - linear scan of input
+        Space Complexity: O(1) - minimal extra space used
+        """
         largest = 0
 
         def dfs(node):

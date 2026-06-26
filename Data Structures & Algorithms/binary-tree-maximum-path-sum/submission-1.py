@@ -7,6 +7,16 @@
 
 class Solution:
     def maxPathSum(self, root: Optional[TreeNode]) -> int:
+        """
+        Solves the Binary Tree Maximum Path Sum problem.
+
+        Algorithm: Algorithm
+        - Approach: Implement algorithm efficiently
+        - Key Operations: recursive exploration with memoization
+
+        Time Complexity: O(n) - linear scan of input
+        Space Complexity: O(1) - minimal extra space used
+        """
         res = [root.val]
 
         def dfs(root):

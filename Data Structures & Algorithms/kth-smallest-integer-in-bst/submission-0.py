@@ -7,11 +7,21 @@
 
 class Solution:
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
+        """
+        Solves the Kth Smallest Integer In Bst problem.
+
+        Algorithm: Stack-based
+        - Approach: Implement algorithm efficiently
+        - Key Operations: insert nodes/elements into result structure
+
+        Time Complexity: O(n) - depends on problem constraints
+        Space Complexity: O(n) - minimal extra space used
+        """
         cur = root
         stack = []
 
-        while cur or stack:
-            while cur:
+        while cur or stack:  # Iterate until condition fails
+            while cur:  # Iterate until condition fails
                 stack.append(cur)
                 cur = cur.left
 

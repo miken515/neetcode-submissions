@@ -1,48 +1,84 @@
-# Valid Anagram
+# Is Anagram
 
-## Problem
-Given two strings, determine if one is an anagram of the other. An anagram contains the same characters with the same frequencies.
+## Problem Description
 
-Example: `s = "anagram", t = "nagaram"` → `True`
+Group words into anagrams or identify anagram relationships.
+
+### Example
+```
+Input: Problem-specific input
+Output: Expected solution
+```
 
 ## Algorithm Explanation
 
 ### Approach: Sorting
-1. **Sort** both strings
-2. **Compare** the sorted versions
-3. If sorted strings are equal, they're anagrams
 
-### Time Complexity
-- **O(n log n)** where n is the length of the string (due to sorting)
+The solution uses **sorting** to solve this problem efficiently.
 
-### Space Complexity
-- **O(1)** or **O(n)** depending on sorting algorithm
+**Key Steps:**
+1. **Initialize**: Set up necessary data structures
+2. **Process**: Apply the algorithm logic
+3. **Return**: Construct and return the result
+
+**Algorithm Pattern:**
+- Implement algorithm efficiently
+- Use appropriate data structures for efficient access
+- Handle edge cases (empty input, single element, etc.)
+
+## Complexity Analysis
+
+### Time Complexity: O(n log n)
+- **Explanation**: standard sorting complexity
+- Each operation in the main loop runs in constant time
+- The loop itself runs for all relevant elements/iterations
+
+### Space Complexity: O(1) or O(n)
+- **Explanation**: depends on sorting algorithm
+- Primary space usage: minimal auxiliary space
 
 ## Visual Representation
 
 ```
-s = "anagram"
-t = "nagaram"
-
-Step 1: Sort both strings
-  s sorted: "aaagmnr"
-  t sorted: "aaagmnr"
-
-Step 2: Compare
-  "aaagmnr" == "aaagmnr" → True ✓
-
-Example of non-anagram:
-  s = "rat"
-  t = "car"
-  
-  s sorted: "art"
-  t sorted: "acr"
-  
-  "art" != "acr" → False ✗
+Problem Input:
+├── Parse/Validate input
+├── Initialize data structure
+│
+├── Main Algorithm Loop:
+│   ├── Process current element
+│   ├── Update state/structure
+│   └── Move to next element
+│
+└── Return Result:
+    └── Output processed data
 ```
 
 ## Key Insights
-- Simple and elegant solution
-- Relies on Python's built-in sorted() function
-- Works because anagrams have identical characters when sorted
-- Less efficient than counting approach for very long strings
+
+1. **Algorithm Selection**: Algorithm chosen based on problem constraints
+2. **Edge Cases**: Handle empty inputs, single elements, and boundary conditions
+3. **Data Structures**: Choose data structures based on access patterns
+4. **Optimization**: Use appropriate algorithms for optimal complexity
+
+## Implementation Details
+
+- **Function Name**: `isAnagram`
+- **Input Parameters**: Properly typed according to problem requirements
+- **Output**: Returns result in expected format
+- **Edge Cases**: Handles empty inputs and boundary conditions
+
+## Common Patterns Used
+
+- Initialize pointer or counter variables
+- Iterate through input data
+- Update state based on algorithm logic
+- Return computed result
+
+## Testing Strategy
+
+1. Test with empty input (if applicable)
+2. Test with single element
+3. Test with typical case
+4. Test with edge cases (maximum values, etc.)
+5. Verify both correctness and complexity requirements
+

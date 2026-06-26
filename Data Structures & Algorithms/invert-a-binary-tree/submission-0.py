@@ -7,6 +7,16 @@
 
 class Solution:
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        """
+        Solves the Invert A Binary Tree problem.
+
+        Algorithm: Algorithm
+        - Approach: Implement algorithm efficiently
+        - Key Operations: recursive exploration with memoization
+
+        Time Complexity: O(n) - linear scan of input
+        Space Complexity: O(1) - minimal extra space used
+        """
         if not root:
             return None
         

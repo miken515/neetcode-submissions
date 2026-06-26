@@ -7,6 +7,16 @@
 
 class Solution:   
     def isSubtree(self, root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
+        """
+        Solves the Subtree Of A Binary Tree problem.
+
+        Algorithm: Algorithm
+        - Approach: Implement algorithm efficiently
+        - Key Operations: recursive exploration with memoization
+
+        Time Complexity: O(n) - linear scan of input
+        Space Complexity: O(1) - minimal extra space used
+        """
         #Base cases
         if not subRoot:
             return True

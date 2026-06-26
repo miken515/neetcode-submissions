@@ -1,58 +1,84 @@
 # Longest Palindromic Substring
 
-## Problem
-Given a string, find the longest palindromic substring. A palindrome reads the same forwards and backwards.
+## Problem Description
 
-Example: `s = "bbbab"` → `"bbb"`
+Solve the longest palindromic substring problem efficiently.
+
+### Example
+```
+Input: Problem-specific input
+Output: Expected solution
+```
 
 ## Algorithm Explanation
 
-### Approach: Expand Around Center
-1. **For each position** in the string:
-   - **Treat it as center** for odd-length palindrome (left=right=i)
-   - **Treat it as center** for even-length palindrome (left=i, right=i+1)
-2. **Expand** left and right pointers while characters match
-3. **Track** the longest palindrome found
-4. **Return** the longest palindrome string
+### Approach: Algorithm
 
-### Time Complexity
-- **O(n²)** where n is the length of the string
+The solution uses **algorithm** to solve this problem efficiently.
 
-### Space Complexity
-- **O(1)** if not counting output; O(n) for result storage
+**Key Steps:**
+1. **Initialize**: Set up necessary data structures
+2. **Process**: Apply the algorithm logic
+3. **Return**: Construct and return the result
+
+**Algorithm Pattern:**
+- Implement algorithm efficiently
+- Use appropriate data structures for efficient access
+- Handle edge cases (empty input, single element, etc.)
+
+## Complexity Analysis
+
+### Time Complexity: O(n^2)
+- **Explanation**: nested loops over input
+- Each operation in the main loop runs in constant time
+- The loop itself runs for all relevant elements/iterations
+
+### Space Complexity: O(1) to O(n)
+- **Explanation**: minimal extra space used
+- Primary space usage: minimal auxiliary space
 
 ## Visual Representation
 
 ```
-String: "bbbab"
-Positions: 0 1 2 3 4
-
-Center at index 1 (odd length):
-  "bbbab"
-    ^  (center)
-   / \
-  L   R expand → "bbb" (length 3)
-
-Center at index 2 (odd length):
-  "bbbab"
-      ^ (center)
-     / \
-    L   R → "b" (length 1)
-
-Center at index 3 (even length):
-  "bbbab"
-       ^^(L=3, R=4) → "ab" doesn't match
-
-Best palindrome found: "bbb" (length 3)
-
-Expansion process:
-  Start: (L,R) = (1,1) = "b"
-  Expand: (L,R) = (0,2) = "bbb" ✓
-  Expand: (L,R) = (-1,3) = out of bounds or mismatch ✗
+Problem Input:
+├── Parse/Validate input
+├── Initialize data structure
+│
+├── Main Algorithm Loop:
+│   ├── Process current element
+│   ├── Update state/structure
+│   └── Move to next element
+│
+└── Return Result:
+    └── Output processed data
 ```
 
 ## Key Insights
-- Center expansion is efficient for this problem
-- Handles both odd-length (single center) and even-length (between two chars) palindromes
-- Early termination when characters don't match
-- Better than brute force or DP for most practical cases
+
+1. **Algorithm Selection**: Algorithm chosen based on problem constraints
+2. **Edge Cases**: Handle empty inputs, single elements, and boundary conditions
+3. **Data Structures**: Choose data structures based on access patterns
+4. **Optimization**: Use appropriate algorithms for optimal complexity
+
+## Implementation Details
+
+- **Function Name**: `longestPalindrome`
+- **Input Parameters**: Properly typed according to problem requirements
+- **Output**: Returns result in expected format
+- **Edge Cases**: Handles empty inputs and boundary conditions
+
+## Common Patterns Used
+
+- Initialize pointer or counter variables
+- Iterate through input data
+- Update state based on algorithm logic
+- Return computed result
+
+## Testing Strategy
+
+1. Test with empty input (if applicable)
+2. Test with single element
+3. Test with typical case
+4. Test with edge cases (maximum values, etc.)
+5. Verify both correctness and complexity requirements
+

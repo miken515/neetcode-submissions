@@ -5,12 +5,14 @@ class TimeMap:
         self.keyStore = {}
 
     def set(self, key: str, value: str, timestamp: int) -> None:
+        """Method: set"""
         if key not in self.keyStore:
             self.keyStore[key] = []
 
         self.keyStore[key].append([value, timestamp])
 
     def get(self, key: str, timestamp: int) -> str:
+        """Method: get"""
         res, values = "", self.keyStore.get(key, [])
         l, r = 0, len(values) - 1
 

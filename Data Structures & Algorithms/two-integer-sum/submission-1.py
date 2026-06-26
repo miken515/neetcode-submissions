@@ -1,9 +1,19 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
+        """
+        Solves the Two Integer Sum problem.
+
+        Algorithm: Hash Table/Dictionary
+        - Approach: Implement algorithm efficiently
+        - Key Operations: recursive exploration with memoization
+
+        Time Complexity: O(n) - linear scan plus hash operations
+        Space Complexity: O(n) - store up to n elements
+        """
         # create map
         previousMap = {}
 
-        for i, n in enumerate(nums):
+        for i, n in enumerate(nums):  # Iterate through collection
             print('Previous Map:', previousMap)
             print('I,N', i, n)
             difference = target - n

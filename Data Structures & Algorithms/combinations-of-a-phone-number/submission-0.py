@@ -1,5 +1,20 @@
+# Combinations Of A Phone Number Solution
+#
+# This solution implements an efficient algorithm for the combinations of a phone number problem.
+# Key concepts: Analyze constraints, choose optimal data structures, handle edge cases
+#
 class Solution:
     def letterCombinations(self, digits: str) -> List[str]:
+        """
+        Solves the Combinations Of A Phone Number problem.
+
+        Algorithm: Backtracking
+        - Approach: Explore all possibilities with pruning
+        - Key Operations: insert nodes/elements into result structure
+
+        Time Complexity: O(2^n) - exponential search space
+        Space Complexity: O(n) - recursion depth and result storage
+        """
         res = []
         digitToChar = {
             "2": "abc",
@@ -18,7 +33,7 @@ class Solution:
                 res.append(curStr)
                 return
             
-            for c in digitToChar[digits[i]]:
+            for c in digitToChar[digits[i]]:  # Iterate through collection
                 backtrack(i + 1, curStr + c)
         
         if digits:

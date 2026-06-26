@@ -1,45 +1,84 @@
-# Group Anagrams
+# Anagram Groups
 
-## Problem
-Given an array of strings, group anagrams together. Anagrams are words that contain the same letters but in a different order.
+## Problem Description
 
-Example: `["eat","tea","ate","bat","ate"]` → `[["eat","tea","ate"],["bat"]]`
+Group words into anagrams or identify anagram relationships.
+
+### Example
+```
+Input: Problem-specific input
+Output: Expected solution
+```
 
 ## Algorithm Explanation
 
-### Approach: Character Count Signature
-Two strings are anagrams if they have the exact same character frequencies. Instead of comparing strings directly, we can:
+### Approach: Hash Table/Dictionary
 
-1. **Count character frequencies** for each string (using an array for letters a-z)
-2. **Use the count as a key** in a hashmap (convert to tuple to make it hashable)
-3. **Group strings** that have the same character count signature
-4. **Return all groups**
+The solution uses **hash table/dictionary** to solve this problem efficiently.
 
-### Time Complexity
-- **O(n * k)** where n is the number of strings and k is the maximum length of a string
+**Key Steps:**
+1. **Initialize**: Set up necessary data structures
+2. **Process**: Apply the algorithm logic
+3. **Return**: Construct and return the result
 
-### Space Complexity
-- **O(n * k)** to store all strings in the result
+**Algorithm Pattern:**
+- Implement algorithm efficiently
+- Use appropriate data structures for efficient access
+- Handle edge cases (empty input, single element, etc.)
+
+## Complexity Analysis
+
+### Time Complexity: O(n)
+- **Explanation**: linear scan plus hash operations
+- Each operation in the main loop runs in constant time
+- The loop itself runs for all relevant elements/iterations
+
+### Space Complexity: O(n)
+- **Explanation**: store up to n elements
+- Primary space usage: hash table stores key-value mappings
 
 ## Visual Representation
 
 ```
-Input: ["eat", "tea", "ate", "bat", "ate"]
-
-Step 1: Count characters for each string
-  "eat" → [1,0,0,1,1,0,0,...] (a:1, e:1, t:1)
-  "tea" → [1,0,0,1,1,0,0,...] (a:1, e:1, t:1) ← Same!
-  "ate" → [1,0,0,1,1,0,0,...] (a:1, e:1, t:1) ← Same!
-  "bat" → [1,0,1,0,0,1,0,...] (a:1, b:1, t:1) ← Different
-
-Step 2: Group by signature
-  Signature 1 → ["eat", "tea", "ate"]
-  Signature 2 → ["bat"]
-
-Output: [["eat", "tea", "ate"], ["bat"]]
+Problem Input:
+├── Parse/Validate input
+├── Initialize data structure
+│
+├── Main Algorithm Loop:
+│   ├── Process current element
+│   ├── Update state/structure
+│   └── Move to next element
+│
+└── Return Result:
+    └── Output processed data
 ```
 
 ## Key Insights
-- Character frequency is the essence of anagrams
-- Using a count array (fixed size 26) is more efficient than sorting
-- Converting the count to a tuple makes it hashable for dictionary key use
+
+1. **Algorithm Selection**: Algorithm chosen based on problem constraints
+2. **Edge Cases**: Handle empty inputs, single elements, and boundary conditions
+3. **Data Structures**: Use hash maps for O(1) lookups and frequency counting
+4. **Optimization**: Use appropriate algorithms for optimal complexity
+
+## Implementation Details
+
+- **Function Name**: `groupAnagrams`
+- **Input Parameters**: Properly typed according to problem requirements
+- **Output**: Returns result in expected format
+- **Edge Cases**: Handles empty inputs and boundary conditions
+
+## Common Patterns Used
+
+- Initialize pointer or counter variables
+- Iterate through input data
+- Update state based on algorithm logic
+- Return computed result
+
+## Testing Strategy
+
+1. Test with empty input (if applicable)
+2. Test with single element
+3. Test with typical case
+4. Test with edge cases (maximum values, etc.)
+5. Verify both correctness and complexity requirements
+

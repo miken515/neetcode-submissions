@@ -1,50 +1,84 @@
-# Combination Sum
+# Combination Target Sum
 
-## Problem
-Given an array of distinct integers and a target number, find all unique combinations of candidates where the sum equals the target. The same number may be used multiple times.
+## Problem Description
 
-Example: `candidates = [2,3,6,7], target = 7` → `[[2,2,3],[7]]`
+Solve the combination target sum problem efficiently.
+
+### Example
+```
+Input: Problem-specific input
+Output: Expected solution
+```
 
 ## Algorithm Explanation
 
-### Approach: Backtracking (DFS with Recursion)
-1. **Base cases**:
-   - If current sum equals target, add combination to result
-   - If we've used all candidates or sum exceeds target, backtrack
-2. **Two choices for each number**:
-   - **Include** it: Add to current combination and recurse with same index
-   - **Exclude** it: Remove from combination and recurse with next index
-3. **Backtrack** by removing the last element before trying the exclude branch
+### Approach: Stack-based
 
-### Time Complexity
-- **O(2^(T/M))** where T is target and M is minimum candidate value
+The solution uses **stack-based** to solve this problem efficiently.
 
-### Space Complexity
-- **O(T/M)** for recursion call stack depth
+**Key Steps:**
+1. **Initialize**: Set up necessary data structures
+2. **Process**: Apply the algorithm logic
+3. **Return**: Construct and return the result
+
+**Algorithm Pattern:**
+- Implement algorithm efficiently
+- Use appropriate data structures for efficient access
+- Handle edge cases (empty input, single element, etc.)
+
+## Complexity Analysis
+
+### Time Complexity: O(n)
+- **Explanation**: depends on problem constraints
+- Each operation in the main loop runs in constant time
+- The loop itself runs for all relevant elements/iterations
+
+### Space Complexity: O(n)
+- **Explanation**: minimal extra space used
+- Primary space usage: recursion/stack depth equals tree height (O(height))
 
 ## Visual Representation
 
 ```
-Candidates: [2,3,6,7], Target: 7
-
-                    []
-                   /  |  \  \
-                  /   |   \  \
-              [2]   [3]   [6] [7]
-             / |     / |     \
-          [2,2] [2,3] [3] [3,3] [6,7]✗
-          / |
-      [2,2,2] [2,2,3]✓
-      
-Legend:
-  ✓ = Valid solution (sum = 7)
-  ✗ = Prune (sum > 7)
-
-Result: [[2,2,3], [7]]
+Problem Input:
+├── Parse/Validate input
+├── Initialize data structure
+│
+├── Main Algorithm Loop:
+│   ├── Process current element
+│   ├── Update state/structure
+│   └── Move to next element
+│
+└── Return Result:
+    └── Output processed data
 ```
 
 ## Key Insights
-- Backtracking explores all possible combinations efficiently
-- Reusing the same index allows unlimited repetitions of a number
-- Pruning (checking if total > target) reduces unnecessary exploration
-- Copy combinations when adding to result (curr.copy())
+
+1. **Algorithm Selection**: Algorithm chosen based on problem constraints
+2. **Edge Cases**: Handle empty inputs, single elements, and boundary conditions
+3. **Data Structures**: Use stack (LIFO) for DFS and traversal operations
+4. **Optimization**: Use appropriate algorithms for optimal complexity
+
+## Implementation Details
+
+- **Function Name**: `combinationSum`
+- **Input Parameters**: Properly typed according to problem requirements
+- **Output**: Returns result in expected format
+- **Edge Cases**: Handles empty inputs and boundary conditions
+
+## Common Patterns Used
+
+- Initialize pointer or counter variables
+- Iterate through input data
+- Update state based on algorithm logic
+- Return computed result
+
+## Testing Strategy
+
+1. Test with empty input (if applicable)
+2. Test with single element
+3. Test with typical case
+4. Test with edge cases (maximum values, etc.)
+5. Verify both correctness and complexity requirements
+

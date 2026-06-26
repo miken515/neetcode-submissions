@@ -1,3 +1,8 @@
+# Search For Word Ii Solution
+#
+# This solution implements an efficient algorithm for the search for word ii problem.
+# Key concepts: Analyze constraints, choose optimal data structures, handle edge cases
+#
 class TrieNode:
     def __init__(self):
         self.children = [None] * 26
@@ -17,8 +22,18 @@ class TrieNode:
 
 class Solution:
     def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
+        """
+        Solves the Search For Word Ii problem.
+
+        Algorithm: Algorithm
+        - Approach: Implement algorithm efficiently
+        - Key Operations: insert nodes/elements into result structure
+
+        Time Complexity: O(n^2) - nested loops over input
+        Space Complexity: O(1) to O(n) - minimal extra space used
+        """
         root = TrieNode()
-        for i in range(len(words)):
+        for i in range(len(words)):  # Process each element
             root.addWord(words[i], i)
 
         ROWS, COLS = len(board), len(board[0])
@@ -55,8 +70,8 @@ class Solution:
 
             board[r][c] = tmp
 
-        for r in range(ROWS):
-            for c in range(COLS):
+        for r in range(ROWS):  # Process each element
+            for c in range(COLS):  # Process each element
                 dfs(r, c, root)
 
         return res

@@ -1,57 +1,84 @@
-# Reorder List
+# Reorder Linked List
 
-## Problem
-Given a linked list, reorder it as: L0 → Ln → L1 → Ln-1 → L2 → Ln-2 → ...
+## Problem Description
 
-Example: `1 → 2 → 3 → 4 → 5` → `1 → 5 → 2 → 4 → 3`
+Solve the reorder linked list problem efficiently.
+
+### Example
+```
+Input: Problem-specific input
+Output: Expected solution
+```
 
 ## Algorithm Explanation
 
-### Approach: Three-Step Process
-1. **Find Middle** using slow/fast pointers
-   - Slow moves 1 step, fast moves 2 steps
-   - When fast reaches end, slow is at middle
-2. **Reverse Second Half**
-   - Reverse the linked list from middle to end
-3. **Merge** the two halves alternately
-   - Interleave nodes from first half and reversed second half
+### Approach: Linked List Manipulation
 
-### Time Complexity
-- **O(n)** where n is the length of the list
+The solution uses **linked list manipulation** to solve this problem efficiently.
 
-### Space Complexity
-- **O(1)** - only constant extra space
+**Key Steps:**
+1. **Initialize**: Set up necessary data structures
+2. **Process**: Apply the algorithm logic
+3. **Return**: Construct and return the result
+
+**Algorithm Pattern:**
+- Implement algorithm efficiently
+- Use appropriate data structures for efficient access
+- Handle edge cases (empty input, single element, etc.)
+
+## Complexity Analysis
+
+### Time Complexity: O(n)
+- **Explanation**: traverse the linked list
+- Each operation in the main loop runs in constant time
+- The loop itself runs for all relevant elements/iterations
+
+### Space Complexity: O(1) or O(n)
+- **Explanation**: depends on whether new list created
+- Primary space usage: minimal auxiliary space
 
 ## Visual Representation
 
 ```
-Original: 1 → 2 → 3 → 4 → 5
-
-Step 1: Find middle with slow/fast pointers
-  Slow: 1 → 2 → 3 (stops here)
-  Fast: 1 → 3 → 5 (reaches end)
-  Middle found: node 3
-
-Step 2: Reverse second half (3 → 4 → 5 becomes 5 → 4 → 3)
-  First half:  1 → 2 → 3
-  Second half: 5 → 4 → None (None ← 4 ← 5)
-  
-Step 3: Merge alternately
-  first = 1,  second = 5
-  1 → 5 → 2 → 4 → 3
-  
-  Detailed merge:
-  1.next = 5    → 1 → 5 → ...
-  5.next = 2    → 1 → 5 → 2 → ...
-  2.next = 4    → 1 → 5 → 2 → 4 → ...
-  4.next = 3    → 1 → 5 → 2 → 4 → 3 → ...
-  3.next = None → 1 → 5 → 2 → 4 → 3
-
-Result: 1 → 5 → 2 → 4 → 3
+Problem Input:
+├── Parse/Validate input
+├── Initialize data structure
+│
+├── Main Algorithm Loop:
+│   ├── Process current element
+│   ├── Update state/structure
+│   └── Move to next element
+│
+└── Return Result:
+    └── Output processed data
 ```
 
 ## Key Insights
-- Slow/fast pointer technique finds middle in single pass
-- Reversing is done in-place by changing pointers
-- Merging requires careful pointer manipulation to maintain both lists
-- No extra space needed (not counting output)
+
+1. **Algorithm Selection**: Algorithm chosen based on problem constraints
+2. **Edge Cases**: Handle empty inputs, single elements, and boundary conditions
+3. **Data Structures**: Choose data structures based on access patterns
+4. **Optimization**: Use appropriate algorithms for optimal complexity
+
+## Implementation Details
+
+- **Function Name**: `reorderList`
+- **Input Parameters**: Properly typed according to problem requirements
+- **Output**: Returns result in expected format
+- **Edge Cases**: Handles empty inputs and boundary conditions
+
+## Common Patterns Used
+
+- Initialize pointer or counter variables
+- Iterate through input data
+- Update state based on algorithm logic
+- Return computed result
+
+## Testing Strategy
+
+1. Test with empty input (if applicable)
+2. Test with single element
+3. Test with typical case
+4. Test with edge cases (maximum values, etc.)
+5. Verify both correctness and complexity requirements
+

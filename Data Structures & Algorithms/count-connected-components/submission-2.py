@@ -1,5 +1,20 @@
+# Count Connected Components Solution
+#
+# This solution implements an efficient algorithm for the count connected components problem.
+# Key concepts: Analyze constraints, choose optimal data structures, handle edge cases
+#
 class Solution:
     def countComponents(self, n: int, edges: List[List[int]]) -> int:
+        """
+        Solves the Count Connected Components problem.
+
+        Algorithm: Hash Table/Dictionary
+        - Approach: Implement algorithm efficiently
+        - Key Operations: recursive exploration with memoization
+
+        Time Complexity: O(n) - linear scan plus hash operations
+        Space Complexity: O(n) - store up to n elements
+        """
         parent = {v:-1 for v in range(n)}
 
         def find(u):
@@ -9,7 +24,7 @@ class Solution:
                 return find(parent[u])
         
         res = n
-        for u, v in edges:
+        for u, v in edges:  # Iterate through collection
             parent_u = find(u)
             parent_v = find(v)
 

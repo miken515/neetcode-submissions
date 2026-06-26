@@ -1,0 +1,122 @@
+================================================================================
+NEETCODE SUBMISSION DOCUMENTATION GENERATOR
+================================================================================
+
+Found 90 submission folders
+Base directory: /Users/mikenguyen/Projects/neetcode-submissions/Data Structures & Algorithms
+
+Processing folders...
+--------------------------------------------------------------------------------
+[  1/90] ✓ add-two-numbers                                   
+[  2/90] ✓ anagram-groups                                    
+[  3/90] ✓ balanced-binary-tree                              
+[  4/90] ✓ binary-search                                     
+[  5/90] ✓ binary-tree-diameter                              
+[  6/90] ✓ binary-tree-from-preorder-and-inorder-traversal   
+[  7/90] ✓ binary-tree-maximum-path-sum                      
+[  8/90] ✓ binary-tree-right-side-view                       
+[  9/90] ✓ buy-and-sell-crypto                               
+[ 10/90] ✓ climbing-stairs                                   
+[ 11/90] ✓ clone-graph                                       
+[ 12/90] ✓ coin-change                                       
+[ 13/90] ✓ combination-target-sum                            
+[ 14/90] ✓ combinations-of-a-phone-number                    
+[ 15/90] ✓ count-connected-components                        
+[ 16/90] ✓ count-good-nodes-in-binary-tree                   
+[ 17/90] ✓ count-number-of-islands                           
+[ 18/90] ✓ count-paths                                       
+[ 19/90] ✓ counting-bits                                     
+[ 20/90] ✓ course-schedule                                   
+[ 21/90] ✓ decode-ways                                       
+[ 22/90] ✓ depth-of-binary-tree                              
+[ 23/90] ✗ design-word-search-data-structure                 
+[ 24/90] ✓ duplicate-integer                                 
+[ 25/90] ✓ eating-bananas                                    
+[ 26/90] ✓ find-duplicate-integer                            
+[ 27/90] ✗ find-median-in-a-data-stream                      
+[ 28/90] ✓ find-minimum-in-rotated-sorted-array              
+[ 29/90] ✓ find-target-in-rotated-sorted-array               
+[ 30/90] ✓ generate-parentheses                              
+[ 31/90] ✓ house-robber                                      
+[ 32/90] ✓ house-robber-ii                                   
+[ 33/90] ✗ implement-prefix-tree                             
+[ 34/90] ✓ insert-into-a-binary-search-tree                  
+[ 35/90] ✓ insert-new-interval                               
+[ 36/90] ✓ invert-a-binary-tree                              
+[ 37/90] ✓ is-anagram                                        
+[ 38/90] ✓ is-palindrome                                     
+[ 39/90] ✓ jump-game                                         
+[ 40/90] ✗ kth-largest-integer-in-a-stream                   
+[ 41/90] ✓ kth-smallest-integer-in-bst                       
+[ 42/90] ✓ last-stone-weight                                 
+[ 43/90] ✓ level-order-traversal-of-binary-tree              
+[ 44/90] ✓ linked-list-cycle-detection                       
+[ 45/90] ✓ longest-common-subsequence                        
+[ 46/90] ✓ longest-consecutive-sequence                      
+[ 47/90] ✓ longest-increasing-subsequence                    
+[ 48/90] ✓ longest-palindromic-substring                     
+[ 49/90] ✓ longest-repeating-substring-with-replacement      
+[ 50/90] ✓ longest-substring-without-duplicates              
+[ 51/90] ✓ lowest-common-ancestor-in-binary-search-tree      
+[ 52/90] ✓ max-area-of-island                                
+[ 53/90] ✓ max-water-container                               
+[ 54/90] ✓ maximum-product-subarray                          
+[ 55/90] ✓ maximum-subarray                                  
+[ 56/90] ✓ merge-k-sorted-linked-lists                       
+[ 57/90] ✓ merge-two-sorted-linked-lists                     
+[ 58/90] ✗ minimum-stack                                     
+[ 59/90] ✓ minimum-window-with-characters                    
+[ 60/90] ✓ missing-number                                    
+[ 61/90] ✓ number-of-one-bits                                
+[ 62/90] ✓ pacific-atlantic-water-flow                       
+[ 63/90] ✓ palindrome-partitioning                           
+[ 64/90] ✓ palindromic-substrings                            
+[ 65/90] ✓ permutations                                      
+[ 66/90] ✓ products-of-array-discluding-self                 
+[ 67/90] ✓ remove-node-from-end-of-linked-list               
+[ 68/90] ✓ reorder-linked-list                               
+[ 69/90] ✓ reverse-a-linked-list                             
+[ 70/90] ✓ reverse-bits                                      
+[ 71/90] ✓ rotting-fruit                                     
+[ 72/90] ✓ same-binary-tree                                  
+[ 73/90] ✓ search-2d-matrix                                  
+[ 74/90] ✓ search-for-word                                   
+[ 75/90] ✓ search-for-word-ii                                
+[ 76/90] ✗ serialize-and-deserialize-binary-tree             
+[ 77/90] ✓ string-encode-and-decode                          
+[ 78/90] ✓ subsets                                           
+[ 79/90] ✓ subtree-of-a-binary-tree                          
+[ 80/90] ✓ sum-of-two-integers                               
+[ 81/90] ✓ three-integer-sum                                 
+[ 82/90] ✗ time-based-key-value-store                        
+[ 83/90] ✓ top-k-elements-in-list                            
+[ 84/90] ✓ trapping-rain-water                               
+[ 85/90] ✓ two-integer-sum                                   
+[ 86/90] ✓ two-integer-sum-ii                                
+[ 87/90] ✓ valid-binary-search-tree                          
+[ 88/90] ✓ valid-tree                                        
+[ 89/90] ✓ validate-parentheses                              
+[ 90/90] ✓ word-break                                        
+--------------------------------------------------------------------------------
+
+================================================================================
+SUMMARY STATISTICS
+================================================================================
+Total Folders:     90
+Successfully Processed: 83
+Failed:            7
+Success Rate:      92.2%
+
+ERRORS:
+--------------------------------------------------------------------------------
+  ✗ design-word-search-data-structure: Could not extract function info from design-word-search-data-structure
+  ✗ find-median-in-a-data-stream: Could not extract function info from find-median-in-a-data-stream
+  ✗ implement-prefix-tree: Could not extract function info from implement-prefix-tree
+  ✗ kth-largest-integer-in-a-stream: Could not extract function info from kth-largest-integer-in-a-stream
+  ✗ minimum-stack: Could not extract function info from minimum-stack
+  ✗ serialize-and-deserialize-binary-tree: Could not extract function info from serialize-and-deserialize-binary-tree
+  ✗ time-based-key-value-store: Could not extract function info from time-based-key-value-store
+
+================================================================================
+Documentation generation complete!
+================================================================================

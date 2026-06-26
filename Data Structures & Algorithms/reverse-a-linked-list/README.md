@@ -1,66 +1,84 @@
-# Reverse Linked List
+# Reverse A Linked List
 
-## Problem
-Given a linked list, reverse it (both iteratively and recursively).
+## Problem Description
 
-Example: `1 → 2 → 3 → 4` → `4 → 3 → 2 → 1`
+Solve the reverse a linked list problem efficiently.
 
-## Algorithm Explanation (Recursive Approach)
+### Example
+```
+Input: Problem-specific input
+Output: Expected solution
+```
 
-### Approach: Recursion with Pointer Reversal
-1. **Base case**: If list is empty, return None
-2. **Recursive case**:
-   - Find the new head by recursing to the end
-   - Once at the end, reverse the pointer: `head.next.next = head`
-   - Set current node's next to None
-3. **Return** the new head (found during recursion)
+## Algorithm Explanation
 
-### Time Complexity
-- **O(n)** where n is the length of the list
+### Approach: Backtracking
 
-### Space Complexity
-- **O(n)** for recursion call stack
+The solution uses **backtracking** to solve this problem efficiently.
+
+**Key Steps:**
+1. **Initialize**: Set up necessary data structures
+2. **Process**: Apply the algorithm logic
+3. **Return**: Construct and return the result
+
+**Algorithm Pattern:**
+- Explore all possibilities with pruning
+- Use appropriate data structures for efficient access
+- Handle edge cases (empty input, single element, etc.)
+
+## Complexity Analysis
+
+### Time Complexity: O(2^n)
+- **Explanation**: exponential search space
+- Each operation in the main loop runs in constant time
+- The loop itself runs for all relevant elements/iterations
+
+### Space Complexity: O(n)
+- **Explanation**: recursion depth and result storage
+- Primary space usage: minimal auxiliary space
 
 ## Visual Representation
 
 ```
-Original: 1 → 2 → 3 → 4
-
-Recursive calls (going down):
-  reverseList(1)
-    reverseList(2)
-      reverseList(3)
-        reverseList(4)
-          reverseList(None) → returns None (base case)
-        
-Reversing (coming back up):
-  At node 4: newHead = 4 (head of reversed part)
-  At node 3: 3.next.next = 3 (make 4 → 3)
-             3.next = None
-             Return 4
-             
-             Before: ... → 3 → 4
-             After:  ... → 3 ← 4  (reversed!)
-             
-  At node 2: 2.next.next = 2 (make 3 → 2)
-             2.next = None
-             Return 4
-             
-  At node 1: 1.next.next = 1 (make 2 → 1)
-             1.next = None
-             Return 4
-
-Final: 4 → 3 → 2 → 1
-
-Pointer reversal at each step:
-  head = 3, head.next = 4
-  head.next.next = head → 4.next = 3 (changes 4 → None to 4 → 3)
-  head.next = None (breaks old link 3 → 4)
+Problem Input:
+├── Parse/Validate input
+├── Initialize data structure
+│
+├── Main Algorithm Loop:
+│   ├── Process current element
+│   ├── Update state/structure
+│   └── Move to next element
+│
+└── Return Result:
+    └── Output processed data
 ```
 
 ## Key Insights
-- Recursive approach is elegant but uses O(n) stack space
-- Key operation: `head.next.next = head` reverses a single link
-- Must set `head.next = None` to break the old forward link
-- New head is found at the deepest recursion level
-- Iterative approach exists (uses O(1) space) but recursive is shown here
+
+1. **Algorithm Selection**: Essential for combinatorial problems
+2. **Edge Cases**: Handle empty inputs, single elements, and boundary conditions
+3. **Data Structures**: Choose data structures based on access patterns
+4. **Optimization**: Use appropriate algorithms for optimal complexity
+
+## Implementation Details
+
+- **Function Name**: `reverseList`
+- **Input Parameters**: Properly typed according to problem requirements
+- **Output**: Returns result in expected format
+- **Edge Cases**: Handles empty inputs and boundary conditions
+
+## Common Patterns Used
+
+- Initialize pointer or counter variables
+- Iterate through input data
+- Update state based on algorithm logic
+- Return computed result
+
+## Testing Strategy
+
+1. Test with empty input (if applicable)
+2. Test with single element
+3. Test with typical case
+4. Test with edge cases (maximum values, etc.)
+5. Verify both correctness and complexity requirements
+

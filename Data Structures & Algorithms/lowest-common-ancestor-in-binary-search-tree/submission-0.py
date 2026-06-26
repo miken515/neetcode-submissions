@@ -7,9 +7,19 @@
 
 class Solution:
     def lowestCommonAncestor(self, root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
+        """
+        Solves the Lowest Common Ancestor In Binary Search Tree problem.
+
+        Algorithm: Algorithm
+        - Approach: Implement algorithm efficiently
+        - Key Operations: iterate through input with conditions
+
+        Time Complexity: O(n) - linear scan of input
+        Space Complexity: O(1) - minimal extra space used
+        """
         cur = root
 
-        while cur:
+        while cur:  # Iterate until condition fails
             if p.val > cur.val and q.val > cur.val:
                 cur = cur.right
             elif p.val < cur.val and q.val < cur.val:

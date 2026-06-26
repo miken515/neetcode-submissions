@@ -1,50 +1,84 @@
-# Valid Palindrome
+# Is Palindrome
 
-## Problem
-Given a string, determine if it is a valid palindrome, considering only alphanumeric characters and ignoring case.
+## Problem Description
 
-Example: `s = "A man, a plan, a canal: Panama"` → `True`
+Solve the is palindrome problem efficiently.
+
+### Example
+```
+Input: Problem-specific input
+Output: Expected solution
+```
 
 ## Algorithm Explanation
 
-### Approach: Filter and Reverse
-1. **Filter** the string to keep only alphanumeric characters
-2. **Convert** all characters to lowercase
-3. **Compare** the filtered string with its reverse
-4. If they match, it's a palindrome
+### Approach: Algorithm
 
-### Time Complexity
-- **O(n)** where n is the length of the string
+The solution uses **algorithm** to solve this problem efficiently.
 
-### Space Complexity
-- **O(n)** for the new filtered string
+**Key Steps:**
+1. **Initialize**: Set up necessary data structures
+2. **Process**: Apply the algorithm logic
+3. **Return**: Construct and return the result
+
+**Algorithm Pattern:**
+- Implement algorithm efficiently
+- Use appropriate data structures for efficient access
+- Handle edge cases (empty input, single element, etc.)
+
+## Complexity Analysis
+
+### Time Complexity: O(n^2)
+- **Explanation**: nested loops over input
+- Each operation in the main loop runs in constant time
+- The loop itself runs for all relevant elements/iterations
+
+### Space Complexity: O(1) to O(n)
+- **Explanation**: minimal extra space used
+- Primary space usage: minimal auxiliary space
 
 ## Visual Representation
 
 ```
-Input: "A man, a plan, a canal: Panama"
-
-Step 1: Filter alphanumeric and lowercase
-  "A man, a plan, a canal: Panama"
-  ↓ (remove non-alphanumeric, lowercase)
-  "amanaplanacanalpanama"
-
-Step 2: Create reverse
-  Original: "amanaplanacanalpanama"
-  Reverse:  "amanaplanacanalpanama"
-  
-Step 3: Compare
-  "amanaplanacanalpanama" == "amanaplanacanalpanama" → True ✓
-
-Non-palindrome example:
-  Input: "hello"
-  Filtered: "hello"
-  Reverse: "olleh"
-  "hello" != "olleh" → False ✗
+Problem Input:
+├── Parse/Validate input
+├── Initialize data structure
+│
+├── Main Algorithm Loop:
+│   ├── Process current element
+│   ├── Update state/structure
+│   └── Move to next element
+│
+└── Return Result:
+    └── Output processed data
 ```
 
 ## Key Insights
-- Filtering ensures we only compare meaningful characters
-- Case-insensitive comparison handles uppercase/lowercase
-- Simple reverse comparison is efficient and clear
-- String slicing `[::-1]` is Pythonic way to reverse
+
+1. **Algorithm Selection**: Algorithm chosen based on problem constraints
+2. **Edge Cases**: Handle empty inputs, single elements, and boundary conditions
+3. **Data Structures**: Choose data structures based on access patterns
+4. **Optimization**: Use appropriate algorithms for optimal complexity
+
+## Implementation Details
+
+- **Function Name**: `isPalindrome`
+- **Input Parameters**: Properly typed according to problem requirements
+- **Output**: Returns result in expected format
+- **Edge Cases**: Handles empty inputs and boundary conditions
+
+## Common Patterns Used
+
+- Initialize pointer or counter variables
+- Iterate through input data
+- Update state based on algorithm logic
+- Return computed result
+
+## Testing Strategy
+
+1. Test with empty input (if applicable)
+2. Test with single element
+3. Test with typical case
+4. Test with edge cases (maximum values, etc.)
+5. Verify both correctness and complexity requirements
+

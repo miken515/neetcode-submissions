@@ -1,3 +1,8 @@
+# Implement Prefix Tree Solution
+#
+# This solution implements an efficient algorithm for the implement prefix tree problem.
+# Key concepts: Analyze constraints, choose optimal data structures, handle edge cases
+#
 class TrieNode:
     def __init__(self):
         self.children = {}

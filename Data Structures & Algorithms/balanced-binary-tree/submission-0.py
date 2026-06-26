@@ -7,6 +7,16 @@
 
 class Solution:
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
+        """
+        Solves the Balanced Binary Tree problem.
+
+        Algorithm: Algorithm
+        - Approach: Implement algorithm efficiently
+        - Key Operations: recursive exploration with memoization
+
+        Time Complexity: O(n) - linear scan of input
+        Space Complexity: O(1) - minimal extra space used
+        """
         def dfs(root):
             if not root:
                 return [True, 0]

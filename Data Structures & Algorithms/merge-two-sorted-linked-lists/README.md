@@ -1,60 +1,84 @@
-# Merge Two Sorted Lists
+# Merge Two Sorted Linked Lists
 
-## Problem
-Given two sorted linked lists, merge them into one sorted linked list.
+## Problem Description
 
-Example: `list1 = [1,2,4], list2 = [1,3,4]` → `[1,1,2,3,4,4]`
+Solve the merge two sorted linked lists problem efficiently.
+
+### Example
+```
+Input: Problem-specific input
+Output: Expected solution
+```
 
 ## Algorithm Explanation
 
-### Approach: Two-Pointer Merge
-1. **Handle edge cases**: If either list is empty, return the other
-2. **Create dummy node** to simplify logic (avoid special-casing head)
-3. **Compare values** at current positions in both lists
-4. **Attach smaller node** to the result and advance that pointer
-5. **Attach remaining nodes** from whichever list has elements left
-6. **Return** dummy.next (the actual merged list head)
+### Approach: Linked List Manipulation
 
-### Time Complexity
-- **O(n + m)** where n and m are lengths of the two lists
+The solution uses **linked list manipulation** to solve this problem efficiently.
 
-### Space Complexity
-- **O(1)** - only a constant amount of extra space (reuses existing nodes)
+**Key Steps:**
+1. **Initialize**: Set up necessary data structures
+2. **Process**: Apply the algorithm logic
+3. **Return**: Construct and return the result
+
+**Algorithm Pattern:**
+- Implement algorithm efficiently
+- Use appropriate data structures for efficient access
+- Handle edge cases (empty input, single element, etc.)
+
+## Complexity Analysis
+
+### Time Complexity: O(n)
+- **Explanation**: traverse the linked list
+- Each operation in the main loop runs in constant time
+- The loop itself runs for all relevant elements/iterations
+
+### Space Complexity: O(1) or O(n)
+- **Explanation**: depends on whether new list created
+- Primary space usage: minimal auxiliary space
 
 ## Visual Representation
 
 ```
-list1 = 1 → 2 → 4 → None
-list2 = 1 → 3 → 4 → None
-
-Step 1: Create dummy node
-  dummy → None
-  builder points to dummy
-
-Step 2: Compare and merge
-  Compare: 1 vs 1 → attach 1 (from list1), advance builder and list1
-  dummy → 1 → None
-  
-  Compare: 2 vs 1 → attach 1 (from list2), advance builder and list2
-  dummy → 1 → 1 → None
-  
-  Compare: 2 vs 3 → attach 2 (from list1), advance builder and list1
-  dummy → 1 → 1 → 2 → None
-  
-  Compare: 4 vs 3 → attach 3 (from list2), advance builder and list2
-  dummy → 1 → 1 → 2 → 3 → None
-  
-  Compare: 4 vs 4 → attach 4 (from list1), advance builder and list1
-  dummy → 1 → 1 → 2 → 3 → 4 → None
-  
-  list1 exhausted, attach remaining list2
-  dummy → 1 → 1 → 2 → 3 → 4 → 4 → None
-
-Result: dummy.next = 1 → 1 → 2 → 3 → 4 → 4 → None
+Problem Input:
+├── Parse/Validate input
+├── Initialize data structure
+│
+├── Main Algorithm Loop:
+│   ├── Process current element
+│   ├── Update state/structure
+│   └── Move to next element
+│
+└── Return Result:
+    └── Output processed data
 ```
 
 ## Key Insights
-- Dummy node simplifies implementation (no special head handling)
-- In-place merge reuses nodes (space-efficient)
-- Always move the pointer of the list from which we took a node
-- Handle remaining nodes at the end (one list will be exhausted first)
+
+1. **Algorithm Selection**: Algorithm chosen based on problem constraints
+2. **Edge Cases**: Handle empty inputs, single elements, and boundary conditions
+3. **Data Structures**: Choose data structures based on access patterns
+4. **Optimization**: Use appropriate algorithms for optimal complexity
+
+## Implementation Details
+
+- **Function Name**: `mergeTwoLists`
+- **Input Parameters**: Properly typed according to problem requirements
+- **Output**: Returns result in expected format
+- **Edge Cases**: Handles empty inputs and boundary conditions
+
+## Common Patterns Used
+
+- Initialize pointer or counter variables
+- Iterate through input data
+- Update state based on algorithm logic
+- Return computed result
+
+## Testing Strategy
+
+1. Test with empty input (if applicable)
+2. Test with single element
+3. Test with typical case
+4. Test with edge cases (maximum values, etc.)
+5. Verify both correctness and complexity requirements
+
